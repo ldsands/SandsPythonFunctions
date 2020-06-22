@@ -1,7 +1,8 @@
 # --------------------------------------------------------------------------------------
 # File: "email_notifier.py"
-# Dir: "F:\RedditData\scripts\RedditFunctions\src\RedditFunctions\EmailFunctions"
+# Dir: "SandsPythonFunctions\src\SandsPythonFunctions"
 # --------------------------------------------------------------------------------------
+
 """
 this file is meant to enable easy emailing when a script either completes or has an
 error
