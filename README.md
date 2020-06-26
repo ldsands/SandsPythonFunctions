@@ -62,19 +62,6 @@ TODO:
 
 - 
 
-## Testing
-
-Pytest runs in whatever directory you're located in at the time you run pytest so if you're not in the directory of the test scripts pytest will not see the files it needs to and will then fail.
-
-Follow the code below to test the functions
-
-```sh
-cd src/tests
-pytest /src/tests/EmailFunctions_test.py
-pytest /src/tests/MultiprocessingFunctions_test.py
-pytest /src/tests/ParquetFunctions_test.py
-```
-
 ## CI/CD
 
 See [this repo](https://github.com/speg03/shishakai/blob/971261e6f73ee8b9dcc83837b6c1a5f809c985f8/.github/workflows/upload-python-package.yml) for an example of someone using poetry with they're python project to upload to PyPI on push to master.
