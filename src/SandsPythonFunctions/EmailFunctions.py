@@ -16,17 +16,11 @@ def get_email_login_info():
         string -- the sender's email address password
     """
     if "sender_email" not in globals():
-        sender_email = input(
-            "Please enter your email address (from:) and press enter: "
-        )
+        sender_email = input("Please enter your email address (from:) and press enter: ")
     if "email_password" not in globals():
-        email_password = input(
-            "Please enter your email password (from:) and press enter: "
-        )
+        email_password = input("Please enter your email password (from:) and press enter: ")
     if "receiver_email" not in globals():
-        receiver_email = input(
-            "Please enter the receiving email address and press enter: "
-        )
+        receiver_email = input("Please enter the receiving email address and press enter: ")
     return sender_email, email_password, receiver_email
 
 
@@ -39,8 +33,6 @@ def send_email(email_subject, email_body, email_password, sender_email):
     """
     import smtplib, ssl
 
-    # your email set up
-    sender_email = sender_email
     # Create a secure SSL context
     context = ssl.create_default_context()
     email_server = smtplib.SMTP_SSL("smtp.gmail.com", port=465, context=context)

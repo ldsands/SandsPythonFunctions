@@ -1,5 +1,24 @@
 # Sands Python Functions
 
+<p align="center">
+<a href="https://github.com/ldsands/SandsPythonFunctions/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
+<a href="https://github.com/ldsands/SandsPythonFunctions/blob/master/LICENSE"><img src="https://img.shields.io/github/license/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
+<img src="https://img.shields.io/github/repo-size/ldsands/SandsPythonFunctions?style=flat-square"></img>
+<img src="https://img.shields.io/github/languages/count/ldsands/SandsPythonFunctions?style=flat-square"></img>
+<a href=""><img src="https://img.shields.io/github/languages/top/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
+<a href="https://github.com/ldsands/SandsPythonFunctions/graphs/commit-activity"><img src="https://img.shields.io/github/commit-activity/m/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
+<a href="https://github.com/ldsands/SandsPythonFunctions/commits/master"><img src="https://img.shields.io/github/last-commit/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
+<a href="https://github.com/ldsands/SandsPythonFunctions/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues-raw/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
+<a href="https://github.com/ldsands/SandsPythonFunctions/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
+<a href="https://pepy.tech/project/sandspythonfunctions"><img src="https://img.shields.io/pypi/dm/sandspythonfunctions?style=flat-square"></img></a>
+<a href="https://lgtm.com/projects/g/ldsands/SandsPythonFunctions"><img src="https://img.shields.io/lgtm/grade/python/g/ldsands/SandsPythonFunctions.svg?logo=lgtm&logoWidth=18&style=flat-square"></img></a>
+<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square"></a>
+<p>
+
+<!-- <img src="_static/cache/matplotlib_pypi_downloads_badge.svg"/> -->
+<!-- https://img.shields.io/lgtm/grade/python/g/ldsands/SandsPythonFunctions.svg?logo=lgtm&logoWidth=18&style=flat-square -->
+<!-- https://img.shields.io/pypi/dm/sandspythonfunctions?style=flat-square -->
+
 Some functions I find useful regularly and I put them all into one package for easy access
 
 I created this using [Poetry](https://python-poetry.org/).
