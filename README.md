@@ -11,7 +11,7 @@
 <a href="https://github.com/ldsands/SandsPythonFunctions/issues?q=is%3Aopen+is%3Aissue"><img src="https://img.shields.io/github/issues-raw/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
 <a href="https://github.com/ldsands/SandsPythonFunctions/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed/ldsands/SandsPythonFunctions?style=flat-square"></img></a>
 <a href="https://pepy.tech/project/sandspythonfunctions"><img src="https://img.shields.io/pypi/dm/sandspythonfunctions?style=flat-square"></img></a>
-<a href="https://lgtm.com/projects/g/ldsands/SandsPythonFunctions"><img src="https://img.shields.io/lgtm/grade/python/g/ldsands/SandsPythonFunctions.svg?logo=lgtm&logoWidth=18&style=flat-square"></img></a>
+<!-- <a href="https://lgtm.com/projects/g/ldsands/SandsPythonFunctions"><img src="https://img.shields.io/lgtm/grade/python/g/ldsands/SandsPythonFunctions.svg?logo=lgtm&logoWidth=18&style=flat-square"></img></a> -->
 <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg?style=flat-square"></a>
 <p>
 
@@ -65,3 +65,7 @@ TODO:
 ## CI/CD
 
 See [this repo](https://github.com/speg03/shishakai/blob/971261e6f73ee8b9dcc83837b6c1a5f809c985f8/.github/workflows/upload-python-package.yml) for an example of someone using poetry with they're python project to upload to PyPI on push to master.
+
+## Other Notes About This Code
+
+I use "TESTCODE:" to designate code used in testing functions and scripts. I try to make sure to comment or delete those lines in the release versions of the package
