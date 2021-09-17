@@ -84,10 +84,11 @@ def clean_text_columns(
         dta[cleaned] = dta[cleaned].str.replace(
             r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+",
             " ",
+            regex=True
         )
-        dta[cleaned] = dta[cleaned].str.replace(r"<[^<>]+(>|$)", " ")
-        dta[cleaned] = dta[cleaned].str.replace(r"\[img_assist[^]]*?\]", " ")
-        dta[cleaned] = dta[cleaned].str.replace(r" +", " ")
+        dta[cleaned] = dta[cleaned].str.replace(r"<[^<>]+(>|$)", " ", regex=True)
+        dta[cleaned] = dta[cleaned].str.replace(r"\[img_assist[^]]*?\]", " ", regex=True)
+        dta[cleaned] = dta[cleaned].str.replace(r" +", " ", regex=True)
         return dta
 
     def remove_stopwords_function(stop_words, dta, cleaned):
@@ -113,7 +114,7 @@ def clean_text_columns(
         """
         import pandas as pd
 
-        dta[cleaned] = dta[cleaned].str.replace("[^\w\s]", "")
+        dta[cleaned] = dta[cleaned].str.replace("[^\w\s]", "", regex=True)
         return dta
 
     def make_lower_function(dta, cleaned):

@@ -32,8 +32,35 @@ I created this using [Poetry](https://python-poetry.org/).
     - You can then enter the code below
 
 ```sh
+# installation on linux
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+# check version
+poetry --version
+# update poetry
+poetry self update
+
+# set up virtual environment using pyenv
+python -m venv venv
+# activate the virtual environment
+source ./venv/bin/activate
+# upgrade pip
+python -m pip install --upgrade pip
+
+# Initialising a pre-existing project (not already managed by poetry)
+cd pre-existing-project
+poetry init
+
+# poetry add (or remove) PackageName
+poetry add PackageName
+poetry remove PackageName
+# update the poetry.lock file
+poetry update
+# The build command builds the source and wheels archives
 poetry build
+# The install command reads the pyproject.toml file from the current project, resolves the dependencies, and installs them.
 poetry install
+# this will publish the package
+poetry publish
 ```
 
 ## Basic Usage Example
