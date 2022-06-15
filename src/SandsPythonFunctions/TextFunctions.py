@@ -51,9 +51,9 @@ def clean_text_columns(
         try:
             return stopwords.words("english")
         except:
-            print('NLTK needs to download the stopwords. This will take a while.')
+            print(f"NLTK needs to download the stopwords. This will take a while.")
             download("stopwords")
-            print('NLTK has finished downloading stopwords.')
+            print(f"NLTK has finished downloading stopwords.")
             return stopwords.words("english")
 
     # clean the text
@@ -76,9 +76,8 @@ def clean_text_columns(
 
     def remove_non_alpha_function():
         dta[cleaned] = dta[cleaned].apply(
-            lambda x: " ".join(word for word in x.split() if word.isalpha())
+            lambda x: " ".join([word for word in x.split() if word.isalpha()])
         )
-
         return dta
 
     def remove_urls_in_string_function(dta, cleaned):
@@ -102,11 +101,8 @@ def clean_text_columns(
         import pandas as pd
 
         dta[cleaned] = dta[cleaned].apply(
-            lambda x: " ".join(
-                word for word in x.split() if word not in (stop_words)
-            )
+            lambda x: " ".join([word for word in x.split() if word not in (stop_words)])
         )
-
         return dta
 
     def remove_punctuation_function(dta, cleaned):
@@ -160,9 +156,8 @@ def clean_text_columns(
         stemmer = SnowballStemmer("english")
         # st = PorterStemmer()
         dta[cleaned] = dta[cleaned].apply(
-            lambda x: " ".join(stemmer.stem(word) for word in x.split() if x != "")
+            lambda x: " ".join([stemmer.stem(word) for word in x.split() if x != ""])
         )
-
         return dta
 
     def split_words_into_list_function(dta, cleaned):
@@ -248,13 +243,8 @@ def remove_words_below_freq(dta, column_name, min_num_word_freq=3):
                 for token in text:
                     frequency[token] += 1
         dta[column_name] = dta[column_name].apply(
-            lambda x: " ".join(
-                word
-                for word in x.split()
-                if frequency[word] > min_num_word_freq
-            )
+            lambda x: " ".join([word for word in x.split() if frequency[word] > min_num_word_freq])
         )
-
     dta["num_words"] = dta[column_name].apply(lambda x: len(str(x).split()))
     print(
         f"average num words after removing words with less than {min_num_word_freq} occurances: {dta['num_words'].values.mean()}"
@@ -300,7 +290,9 @@ def write_columns_to_text(
     if len(dta) > 1000:
         print(f"You have {len(dta)} rows this file maybe too large to open easily")
     dta_values = dta.values.tolist()
-    final_list = [" - ".join(str(row)) for row in dta_values]
+    final_list = []
+    for row in dta_values:
+        final_list.append(" - ".join(str(row)))
     final_list = "\n\n\n".join(final_list)
     # get path and write to file
     path = pathlib.Path(".").parent
